@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+    "outDir": "build",
+    "lib": ["es6", "es7", "dom"],
+    "paths": {
+      "src/core/*": ["src/core/*"],
+      "src/shared/*": ["src/shared/*"],
+      "src/components/*": ["src/components/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["dist", "build", "node_modules"]
+}

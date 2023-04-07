@@ -1,0 +1,70 @@
+// == Breakpoints ===
+$breakpoints: (
+  small: 480px,
+  medium: 769px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px,
+  medium-largest: 1400px,
+  super-largest: 1440px,
+  header-medium: 900px
+);
+
+$color: (
+  primary: #008060,
+  // secondary: #f75c07,
+  white: #ffffff,
+  black: #000000,
+  black-a: #1a1a1a,
+  grey-a: #f6f6f7,
+  gray: #fafbfb,
+  title-black: #202223,
+  title-back-a: #1d1f20,
+  grey-b: #e1e3e5,
+  grey-c: #edeeef,
+  grey-d: #f1f2f3,
+  grey-e: #42474c,
+  grey-f: #1d1e20,
+  grey-g: #6d7175,
+  // subdued color
+  grey-h: #cccccc,
+  grey-i: #b1b7bb,
+  grey-j: #babfc3,
+  grey-k: #c9cccf,
+  grey-l: #cad2d7,
+  grey-m: #5c5f62,
+  grey-n: #2d2d2d,
+  grey-o: #939495,
+  blue-a: #2c6ecb,
+  blue-b: #4780d2,
+  blue-c: #1f5199,
+  blue-d: #f2f7fe,
+  blue-e: #458fff,
+  blue-f: #e5effd,
+  blue-g: #103262,
+  green-a: #00a0ac,
+  text-msg: #8c9196,
+  text-black: #333333,
+  text-white: #e3e5e7,
+  bg-grey: #d7dcdf,
+  bg-black: #202123,
+  error-bg: #cd290c,
+  err-msg: #ec0d0d,
+  err-msg-login: #d72c0d,
+  btn-danger: #d82c0d,
+  btn-danger-hover: #bc2200,
+  btn-danger-active: #a21b00,
+  border-err: rgba(253, 87, 73, 1),
+  bg-err: #fff4f4,
+  err-textarea: #fd5749
+);
+
+$font-size: (
+  sm: 13px,
+  normal: 14px,
+  medium: 15px,
+  lg: 18px,
+  xl: 20px
+);
+
+$font-body: 'Noto Sans', sans-serif;

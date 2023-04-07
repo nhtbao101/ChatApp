@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body {
+  font-family: $font-body;
+  position: relative;
+  // font-weight: 400;
+  // color: map-get($color, text-black);
+  // line-height: 1.25rem;
+  // letter-spacing: 0.2px;
+  // background-color: map-get($color, white);
+  overscroll-behavior-y: contain;
+  overscroll-behavior-x: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+p {
+  @include pxRem(font-size, map-get($font-size, normal));
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: map-get($color, blue-a);
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  text-align: inherit;
+  text-decoration: none !important;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-start-x {
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-end-x {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-center-y {
+  display: flex;
+  align-items: center;
+}
+.flex-start-y {
+  display: flex;
+  align-items: flex-start;
+}
+.flex-end-y {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-centered {
+  @extend %flex-centered;
+}
+
+.flex-column-centered {
+  @extend %flex-collumn-centered;
+}
+
+.flex-btw-x {
+  @extend %flex-row-btw;
+}
+button {
+  font-family: $font-body !important;
+}
+
+em {
+  font-style: italic;
+}
+.pre-line {
+  white-space: pre-line;
+}
+
+.txt-line-through {
+  text-decoration: line-through;
+}
+.w-45-percent {
+  width: 45%;
+}
+.w-60-percent {
+  width: 60%;
+}
+.break-spaces {
+  white-space: break-spaces;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.d-none {
+  display: none;
+}
+
+.disable-link {
+  pointer-events: none;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.break-spaces {
+  white-space: break-spaces;
+}
+.overflow-break {
+  overflow-wrap: break-word;
+}
+
+.break-wrd {
+  word-break: break-word;
+}
+
+textarea {
+  @include pxRem(padding, 15);
+  resize: none;
+  border: solid 1px map-get($color, grey-k);
+  border-radius: 5px;
+  position: relative;
+  outline: 0;
+  width: 100%;
+  font-family: inherit;
+  word-break: break-all;
+  white-space: break-spaces;
+  &:focus {
+    outline: 2px solid map-get($color, blue-b);
+    outline-offset: 1px;
+  }
+
+  &.not-outline {
+    &:focus {
+      outline: none;
+      outline-offset: 0;
+    }
+  }
+}
