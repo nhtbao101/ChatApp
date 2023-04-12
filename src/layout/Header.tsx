@@ -1,46 +1,73 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../services/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
+import { useDispatch } from 'react-redux';
+import { setUser } from 'src/stores/auth/authSlice';
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const [user] = useAuthState(auth);
+  const googleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithRedirect(auth, provider);
+  };
+  const signOut = () => {
+    auth.signOut();
+  };
+
+  useEffect(() => {
+    if (user) {
+      const tempUser = {
+        id: user.uid,
+        userName: user.displayName,
+        email: user.email,
+        photoUrl: user.photoURL
+      };
+      dispatch(setUser(tempUser));
+    }
+  }, [user]);
+
   return (
-    // <header>
-    <div>
-      {/* <video autoPlay muted loop id="myVideo">
-        <source
-          src="Media/y2mate.com - high tech digital earth background 4 k KWC32SJ_1080p.mp4"
-          type="video/mp4"
-        />
-      </video> */}
-      <header>
-        <Link to="/">
-          <h2 className="logo">
-            ST
-            <img src="https://i.postimg.cc/FHW3Lsf0/Group-4287-1.png" />
-            RK PROTOCOL
-          </h2>
-        </Link>
-        <ul>
-          <li>Features</li>
-          <li>Token</li>
-          <li>Roadmap</li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </header>
-      {/* <div>
-        <div className="title">
-          Stark <span>Protocol</span>
+    <header>
+      <div className="container">
+        <div className="content">
+          <Link to="/">
+            <h2 className="logo">
+              ST
+              <img src="" />
+              BARO CHAT
+            </h2>
+          </Link>
+          <ul className="menu-section">
+            <li>Features</li>
+            <li>Token</li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            {user ? (
+              <li className="avatar-section">
+                <img className="avatar" src={user.photoURL} alt="avatar" />
+                <ul>
+                  <li>{user.displayName}</li>
+                  <li onClick={signOut}>Logout</li>
+                </ul>
+              </li>
+            ) : (
+              <li className="login-section">
+                <img
+                  onClick={googleSignIn}
+                  src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button-1024x260.png"
+                  alt="Sign in with google"
+                />
+              </li>
+            )}
+          </ul>
         </div>
-        <div className="text1">
-          <span>Built on Near and Solana</span>
-        </div>
-        <div className="text1 text2">
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-        </div>
-      </div> */}
-    </div>
-    // </header>
+      </div>
+    </header>
   );
 };
 

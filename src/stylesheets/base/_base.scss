@@ -35,7 +35,7 @@ ul {
 }
 
 a {
-  color: map-get($color, blue-a);
+  color: map-get($color, white);
   appearance: none;
   background: none;
   border: 0;
@@ -182,4 +182,8 @@ textarea {
       outline-offset: 0;
     }
   }
+}
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
 }

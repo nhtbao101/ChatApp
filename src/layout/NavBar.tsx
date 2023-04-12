@@ -63,7 +63,7 @@ const SideBar = () => {
               </Link>
             </li>
           </ul>
-          <div className="bottom-cotent">
+          <div className="bottom-content">
             <li className="list">
               <Link to="#" className="nav-link">
                 <i className="bx bx-cog icon"></i>
