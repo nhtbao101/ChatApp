@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="foot_left">
                 <img src="https://i.ibb.co/1GTcwmk/logo.png" alt="" />
                 <p> WINDOW KING, PROFESSIONAL WINDOW CLEANING,</p>
-                <p> IS A LOCAL FAMILY RUN WINDOW CLEANING SERVICE </p>
+                <p> COME BANK HOME AND GET HAPPINESS </p>
                 <p> THAT BEEN IN BUSINESS SINCE 1998.</p>
               </div>
             </div>
@@ -19,11 +19,11 @@ const Footer = () => {
                 <h3>CONTACTS</h3>
                 <p>
                   <span>Address: </span>
-                  West Littleton Boulevard Littleton, Colorado 80187
+                  29 Yet Kieu, Thong Nhat ward, Buon Ho town, DakLak province
                 </p>
                 <p>
                   <span>Phone: </span>
-                  <a href="tel:#">(123) 731-4000</a>
+                  <a href="tel:#">(034) 999888</a>
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6">
               <p>
-                Design and Development By <a href="#"> Soumitra ghosh</a>
+                Design and Development By <a href="#"> Baro</a>
               </p>
             </div>
           </div>
